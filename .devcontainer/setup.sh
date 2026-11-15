@@ -2,25 +2,16 @@
 #!/bin/bash
 set -e
 
-echo "Instalando herramientas graficas..."
+echo "Preparando entorno Python..."
 
-sudo apt-get update
+python3 -m venv .venv
 
-sudo apt-get install -y \
-    xvfb \
-    x11vnc \
-    fluxbox \
-    websockify \
-    novnc \
-    python3-tk
+.venv/bin/python -m pip install --upgrade pip
 
-echo "Instalando dependencias Python..."
+if [ -f requirements.txt ]; then
+    .venv/bin/python -m pip install -r requirements.txt
+fi
 
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-
-echo "Comprobando Tkinter..."
-
-python -c "import tkinter; print('Tkinter OK')"
-
-echo "Instalacion completada."
+echo "================================"
+echo "INSTALACION COMPLETADA"
+echo "================================"
