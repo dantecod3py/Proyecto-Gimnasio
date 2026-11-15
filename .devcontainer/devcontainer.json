@@ -1,15 +1,15 @@
-
 {
-  "name": "CustomTkinter - GUI",
-  "build": {
-    "dockerfile": "Dockerfile"
+  "name": "Mi CustomTkinter",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
   "forwardPorts": [6080],
   "portsAttributes": {
     "6080": {
-      "label": "App grafica",
+      "label": "Escritorio",
       "onAutoForward": "openBrowser"
     }
   },
-  "postCreateCommand": "bash .devcontainer/setup.sh"
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y python3-tk && pip install -r requirements.txt"
 }
