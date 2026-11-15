@@ -1,0 +1,22 @@
+# Sistema de Gestión de Gimnasio
+## ¿Cómo ejecutar el proyecto?
+Para probar el sistema desde GitHub Codespaces, sigue estos pasos:
+
+1. Entra al repositorio de GitHub.
+2. Haz clic en el botón **Code**.
+3. Ve a la sección **Codespaces**.
+4. Selecciona **Create codespace on main**.
+5. Espera a que termine de cargar el entorno.
+
+### Abrir el sistema
+
+1. Ve a la pestaña **Ports**.
+2. Busca el puerto `6080` y abre el enlace en el navegador.
+3. Si aparece la opción Connect, haz clic en ella.
+4. Abre la terminal del Codespace y ejecuta:
+
+```
+python interfaz.py
+```
+
+Ya podrás utilizar el sistema desde el navegador kp.
